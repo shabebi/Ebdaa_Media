@@ -1,9 +1,17 @@
 import React from "react";
+import './Hero.css';
 
 export default function Hero() {
   return (
-    <section id="about" className="hero">
+    <section id="hero" className="hero">
+      {/* Top colored horizontal line */}
+      <div className="hero-top-line"></div>
+
       <div className="container hero-grid">
+        <div className="hero-image">
+          <img src="/waterfall method-rafiki.png" alt="Waterfall Method" />
+        </div>
+
         <div className="hero-text">
           <h2>نبذة تعريفية</h2>
           <p>
@@ -14,10 +22,6 @@ export default function Hero() {
             والهوية البصرية المتكاملة. نؤمن أن لكل علامة تجارية قصة تستحق أن
             تروى بإبداع، ونحن هنا لنرويها بأفضل صورة.
           </p>
-          <div className="hero-cta">
-            <a href="#contact" className="btn btn-primary">اطلب عرض</a>
-            <a href="#services" className="btn btn-outline">تعرف على خدماتنا</a>
-          </div>
         </div>
 
         <div className="hero-card">

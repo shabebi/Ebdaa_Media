@@ -79,43 +79,6 @@ body{
   box-shadow: 0 6px 20px rgba(18, 116, 121, 0.12);
 }
 
-/* hero */
-.hero{padding:4rem 0}
-.hero-grid{
-  display:grid;
-  grid-template-columns:1fr 360px;
-  gap:2rem;
-  align-items:center;
-}
-.hero-text h2{margin-top:0;font-size:1.6rem}
-.hero-text p{color:#444;margin-top:0.6rem}
-.hero-cta{margin-top:1rem;display:flex;gap:0.8rem;flex-wrap:wrap}
-.btn{
-  display:inline-block;padding:0.65rem 1rem;border-radius:10px;text-decoration:none;font-weight:700;
-}
-.btn-primary{
-  background:linear-gradient(90deg,var(--accent-red),var(--accent-cyan));
-  color:white;
-  box-shadow:0 10px 30px rgba(34,172,198,0.12);
-}
-.btn-outline{
-  border:2px solid rgba(34,172,198,0.12);
-  background:transparent;
-  color:var(--text);
-}
-
-/* hero card */
-.hero-card .brand-card{
-  background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
-  border-radius:var(--radius);
-  padding:1.4rem;
-  box-shadow:var(--card-shadow);
-  border-top:6px solid var(--accent-cyan);
-  transform:translateY(0);
-  transition:transform .35s;
-}
-.hero-card .brand-card:hover{transform:translateY(-8px)}
-
 /* services */
 .section-title{font-size:1.4rem;margin-bottom:1rem}
 .services .cards{

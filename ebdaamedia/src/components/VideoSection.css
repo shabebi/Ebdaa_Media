@@ -1,0 +1,12 @@
+.video-section {
+  margin-top: 60px; /* space for fixed header */
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.video-section video {
+  width: 80%;
+  height: auto;
+  margin-left: 310px;
+}

@@ -1,0 +1,92 @@
+.hero {
+  position: relative;
+  direction: rtl; /* keep text right to left */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  padding: 2rem 1rem;
+  background: #fdfdfd;
+}
+
+.hero-top-line {
+  height: 8px; /* reduced from 40px, 40px is very thick for a line */
+  background-color: #2ea3bb;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
+}
+
+.hero-grid {
+  display: grid;
+  /* Change columns: bigger image (say 40% width), rest for text/card */
+  grid-template-columns: 40% 1.6fr 1.4fr;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: none; /* remove max-width */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgb(46 163 187 / 0.35);
+  animation: floatUp 3s ease-in-out infinite alternate;
+  object-fit: contain;
+  /* Make image taller for a bigger presence */
+  max-height: 500px;
+}
+
+
+/* Smooth floating animation for image */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    filter: drop-shadow(0 5px 5px rgb(46 163 187 / 0.25));
+  }
+  100% {
+    transform: translateY(-15px);
+    filter: drop-shadow(0 10px 15px rgb(46 163 187 / 0.3));
+  }
+}
+
+.hero-text {
+  text-align: right;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2ea3bb;
+  font-family: 'Cairo', sans-serif; /* Arabic-friendly font, add if you can */
+}
+
+.hero-text p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.hero-card {
+  background: #eef9fb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgb(46 163 187 / 0.1);
+}
+
+.brand-card h3 {
+  color: #2ea3bb;
+  margin-top: 0;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  font-family: 'Cairo', sans-serif;
+}
+
+.brand-card p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
