@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import AboutSection from "./components/AboutSection";
+import ImageSlider from "./components/ImageSlider";
 
 export default function App() {
   const footerRef = useRef(null);
@@ -19,6 +20,7 @@ export default function App() {
         <Services />
       </section>
       <AboutSection /> 
+      <ImageSlider />
       <section id="contact">
         <Contact />
       </section>

@@ -12,46 +12,41 @@
   max-width: 800px;
   width: 100%;
   text-align: center;
-  padding: 3rem;
-  background-color: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   position: relative;
   overflow: hidden;
 }
 
-.contact-header {
-  margin-bottom: 2.5rem;
-  position: relative;
-}
-
 .contact-header h2 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   color: #333;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .accent-line {
-  height: 6px;
-  background-color: #d25545;
-  width: 180px;
+  height: 5px;
+  width: 160px;
   margin: 0 auto;
+  background-color: #d25545;
   border-radius: 3px;
 }
 
 .contact-details {
-  margin-bottom: 2.5rem;
-  font-size: 1.4rem;
+  margin: 2rem 0;
+  font-size: 1.3rem;
   color: #444;
 }
 
 .contact-item {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .arrow {
@@ -59,37 +54,18 @@
   font-size: 1.2rem;
 }
 
-.follow-section {
-  margin-bottom: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid #eee;
-}
-
-.follow-title {
-  font-size: 1.3rem;
-  color: #555;
-  margin-bottom: 0.5rem;
-}
-
-.follow-website {
-  font-size: 1.4rem;
-  color: #d25545;
-  font-weight: 600;
-}
-
 .tagline {
-  font-size: 1.2rem;
-  color: #666;
-  line-height: 1.8;
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.7;
   max-width: 700px;
-  margin: 0 auto;
-  padding: 1.5rem;
+  margin: 1.5rem auto 0;
+  padding: 1.2rem;
   background-color: #fdf5f4;
-  border-radius: 12px;
+  border-radius: 10px;
   border-left: 4px solid #d25545;
 }
 
-/* Decorative Elements */
 .contact-container::before {
   content: '';
   position: absolute;
