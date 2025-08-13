@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import AboutSection from "./components/AboutSection";
 
 export default function App() {
   const footerRef = useRef(null);
@@ -17,6 +18,7 @@ export default function App() {
       <section id="services">
         <Services />
       </section>
+      <AboutSection /> 
       <section id="contact">
         <Contact />
       </section>

@@ -1,0 +1,91 @@
+/* Full-height services section, vertical scroll "pauses" here */
+.services {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Title styling */
+.services .section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Horizontal scroll container */
+.services .cards {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+.services .cards::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each card = 1 viewport width */
+.services .card {
+  flex: 0 0 100%;
+  width: 100vw;
+  height: calc(100vh - 80px); /* leaves room for title */
+  background: white;
+  border-top: 8px solid;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content inside each card */
+.card-content {
+  display: flex;
+  flex-direction: row; /* image & text side by side */
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 90%;
+  height: auto;
+}
+
+/* Text column */
+.text-section {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.text-section h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* Image column */
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}

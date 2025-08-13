@@ -1,0 +1,102 @@
+.contact-section {
+  direction: rtl;
+  background-color: #f9f9f9;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.contact-container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-header {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.contact-header h2 {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.accent-line {
+  height: 6px;
+  background-color: #d25545;
+  width: 180px;
+  margin: 0 auto;
+  border-radius: 3px;
+}
+
+.contact-details {
+  margin-bottom: 2.5rem;
+  font-size: 1.4rem;
+  color: #444;
+}
+
+.contact-item {
+  margin-bottom: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.arrow {
+  color: #d25545;
+  font-size: 1.2rem;
+}
+
+.follow-section {
+  margin-bottom: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.follow-title {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.follow-website {
+  font-size: 1.4rem;
+  color: #d25545;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #fdf5f4;
+  border-radius: 12px;
+  border-left: 4px solid #d25545;
+}
+
+/* Decorative Elements */
+.contact-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(210, 85, 69, 0.05) 0%, rgba(210, 85, 69, 0.01) 100%);
+  z-index: 0;
+}
