@@ -1,3 +1,31 @@
+/* Floating & fade animation keyframes */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatRed {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 5px 10px rgba(210, 85, 69, 0.25);
+  }
+  50% {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(210, 85, 69, 0.35);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 5px 10px rgba(210, 85, 69, 0.25);
+  }
+}
+
+/* Contact Section */
 .contact-section {
   direction: rtl;
   background-color: #f9f9f9;
@@ -8,6 +36,7 @@
   min-height: 60vh;
 }
 
+/* Container with floating animation */
 .contact-container {
   max-width: 800px;
   width: 100%;
@@ -18,8 +47,14 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   position: relative;
   overflow: hidden;
+
+  opacity: 0;
+  animation: 
+    fadeSlideUp 1s ease-out forwards 0.3s, 
+    floatRed 3s ease-in-out infinite alternate 0s;
 }
 
+/* Header */
 .contact-header h2 {
   font-size: 2.5rem;
   color: #333;
@@ -35,25 +70,40 @@
   border-radius: 3px;
 }
 
+/* Contact Details */
 .contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   margin: 2rem 0;
   font-size: 1.3rem;
   color: #444;
 }
 
+/* Each contact item with fade-in animation */
 .contact-item {
-  margin-bottom: 1rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 1.1rem;
+  color: #333;
+  direction: ltr;
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease-out forwards;
 }
 
-.arrow {
+.contact-item:nth-child(1) { animation-delay: 0.5s; }
+.contact-item:nth-child(2) { animation-delay: 0.7s; }
+.contact-item:nth-child(3) { animation-delay: 0.9s; }
+
+.contact-item i {
   color: #d25545;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  order: -1; /* icon on the left */
 }
 
+/* Tagline with floating and fade animation */
 .tagline {
   font-size: 1.15rem;
   color: #555;
@@ -66,6 +116,7 @@
   border-left: 4px solid #d25545;
 }
 
+/* Container gradient overlay */
 .contact-container::before {
   content: '';
   position: absolute;

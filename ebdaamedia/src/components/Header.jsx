@@ -27,7 +27,7 @@ export default function Header({ footerRef }) {
     <header className="header">
       <nav>
         <ul>
-          <li><a href="#hero">نبذة تعريفية</a></li>
+          <li><a href="#hero">من نحن؟</a></li>
           <li><a href="#services">خدماتنا</a></li>
           <li><a href="#contact">تواصل معنا</a></li>
         </ul>

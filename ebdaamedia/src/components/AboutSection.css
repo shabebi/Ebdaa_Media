@@ -7,6 +7,7 @@
   background: #fdfdfd;
   max-width: 1400px;
   margin: 0 auto;
+  text-align: right;
 }
 
 .about-top-line {
@@ -24,6 +25,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
+  direction: ltr; 
 }
 
 /* Left Section Styles */
@@ -38,6 +40,7 @@
   border-radius: 12px;
   padding: 1.8rem;
   box-shadow: 0 4px 15px rgba(46, 163, 187, 0.1);
+  text-align: right;
 }
 
 .feature-card h2 {
@@ -74,6 +77,7 @@
   padding: 2.5rem;
   box-shadow: 0 4px 15px rgba(46, 163, 187, 0.1);
   position: relative;
+  text-align: right;
 }
 
 .about-right::before {
@@ -133,41 +137,4 @@
   color: #444;
   line-height: 1.9;
   font-size: 1.1rem;
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .achievements {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .feature-card, .about-right {
-    padding: 1.5rem;
-  }
-  
-  .about-top-line {
-    width: 85%;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-section {
-    padding: 2rem 0.5rem;
-  }
-  
-  .feature-card h2, .about-right h3 {
-    font-size: 1.5rem;
-  }
-  
-  .about-right h2 {
-    font-size: 1.6rem;
-  }
 }
