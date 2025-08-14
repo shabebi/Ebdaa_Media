@@ -83,3 +83,111 @@
 .slider-btn:hover {
   background: rgba(0, 0, 0, 0.6);
 }
+
+/* Tablet Styles (992px and below) */
+@media (max-width: 992px) {
+  .slider-text h2 {
+    font-size: 34px;
+  }
+  
+  .slider-text p {
+    font-size: 18px;
+  }
+  
+  .slider-bottom {
+    gap: 30px;
+  }
+  
+  .side-images img {
+    width: 80px;
+  }
+  
+  .image-card {
+    width: 400px;
+  }
+}
+
+/* Small Tablet Styles (768px and below) */
+@media (max-width: 768px) {
+  .slider-wrapper {
+    gap: 20px;
+    padding: 15px;
+  }
+  
+  .slider-text h2 {
+    font-size: 28px;
+  }
+  
+  .slider-text p {
+    font-size: 16px;
+  }
+  
+  .slider-bottom {
+    gap: 20px;
+  }
+  
+  .side-images img {
+    width: 60px;
+  }
+  
+  .image-card {
+    width: 320px;
+  }
+  
+  .slider-btn {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+  .slider-text h2 {
+    font-size: 24px;
+  }
+  
+  .slider-text p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .slider-bottom {
+    gap: 15px;
+  }
+  
+  .side-images {
+    gap: 10px;
+  }
+  
+  .side-images img {
+    width: 40px;
+  }
+  
+  .image-card {
+    width: 240px;
+  }
+  
+  .slider-btn {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile Styles (360px and below) */
+@media (max-width: 360px) {
+  .slider-text h2 {
+    font-size: 22px;
+  }
+  
+  .slider-text p {
+    font-size: 13px;
+  }
+  
+  .side-images img {
+    width: 35px;
+  }
+  
+  .image-card {
+    width: 200px;
+  }
+}

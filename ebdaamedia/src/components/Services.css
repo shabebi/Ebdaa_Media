@@ -89,3 +89,112 @@
   border-radius: 12px;
   object-fit: cover;
 }
+
+/* Tablet Styles (1024px and below) */
+@media (max-width: 1024px) {
+  .services .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-content {
+    gap: 2rem;
+    max-width: 95%;
+  }
+  
+  .text-section h3 {
+    font-size: 1.8rem;
+  }
+  
+  .text-section p {
+    font-size: 1.1rem;
+    max-width: 400px;
+  }
+  
+  .image-section img {
+    max-width: 400px;
+  }
+}
+
+/* Small Tablet Styles (768px and below) */
+@media (max-width: 768px) {
+  .services .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card-content {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  
+  .text-section {
+    min-width: auto;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .text-section h3 {
+    font-size: 1.6rem;
+  }
+  
+  .text-section p {
+    font-size: 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .image-section {
+    width: 90%;
+  }
+  
+  .image-section img {
+    max-width: 350px;
+  }
+}
+
+/* Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+  .services .section-title {
+    font-size: 1.4rem;
+  }
+  
+  .services .card {
+    height: calc(100vh - 60px);
+  }
+  
+  .text-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .text-section p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .image-section img {
+    max-width: 280px;
+  }
+}
+
+/* Small Mobile Styles (360px and below) */
+@media (max-width: 360px) {
+  .services .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .text-section h3 {
+    font-size: 1.3rem;
+  }
+  
+  .text-section p {
+    font-size: 0.9rem;
+  }
+  
+  .image-section img {
+    max-width: 240px;
+  }
+}

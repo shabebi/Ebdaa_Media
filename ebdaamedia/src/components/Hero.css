@@ -87,3 +87,138 @@
   color: #444;
   line-height: 1.5;
 }
+
+/* Tablet Styles (1024px and below) */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 45% 1fr;
+    grid-template-areas: 
+      "image text"
+      "image card";
+    gap: 1.5rem;
+  }
+  
+  .hero-image {
+    grid-area: image;
+    align-self: center;
+  }
+  
+  .hero-text {
+    grid-area: text;
+  }
+  
+  .hero-card {
+    grid-area: card;
+  }
+  
+  .hero-text h2 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-image img {
+    max-height: 450px;
+  }
+}
+
+/* Small Tablet Styles (768px and below) */
+@media (max-width: 768px) {
+  .hero {
+    padding: 1.5rem 1rem;
+  }
+  
+  .hero-top-line {
+    width: 80%;
+    margin-bottom: 1.2rem;
+  }
+  
+  .hero-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "text"
+      "image"
+      "card";
+    gap: 1.5rem;
+  }
+  
+  .hero-text h2 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .hero-image img {
+    max-height: 400px;
+  }
+  
+  .hero-card {
+    padding: 1.2rem;
+  }
+}
+
+/* Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.2rem 0.8rem;
+  }
+  
+  .hero-top-line {
+    width: 85%;
+    height: 6px;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .hero-image img {
+    max-height: 350px;
+    box-shadow: 0 10px 20px rgba(46, 163, 187, 0.25);
+  }
+  
+  .hero-card {
+    padding: 1rem;
+  }
+  
+  .brand-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .brand-card p {
+    font-size: 0.9rem;
+  }
+  
+  @keyframes floatUp {
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+/* Small Mobile Styles (360px and below) */
+@media (max-width: 360px) {
+  .hero-text h2 {
+    font-size: 1.6rem;
+  }
+  
+  .hero-image img {
+    max-height: 300px;
+  }
+  
+  .brand-card h3 {
+    font-size: 1rem;
+  }
+  
+  .brand-card p {
+    font-size: 0.85rem;
+  }
+}
