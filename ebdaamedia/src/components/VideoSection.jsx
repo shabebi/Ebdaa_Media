@@ -14,7 +14,7 @@ export default function VideoSection() {
 
   return (
     <div className="video-section">
-      <video ref={videoRef} src="/0812 (1).mp4" autoPlay muted></video>
+      <video ref={videoRef} src="0812 (1).mp4" autoPlay muted></video>
     </div>
   );
 }

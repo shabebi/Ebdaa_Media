@@ -9,7 +9,7 @@ export default function Hero() {
 
       <div className="container hero-grid">
         <div className="hero-image">
-          <img src="/waterfall method-rafiki.png" alt="Waterfall Method" />
+          <img src="waterfall method-rafiki.png" alt="Waterfall Method" />
         </div>
 
         <div className="hero-text">

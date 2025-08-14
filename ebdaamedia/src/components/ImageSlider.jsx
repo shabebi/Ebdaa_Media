@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./ImageSlider.css";
-import sideImage1 from "/new-05.png";
-import sideImage2 from "/new-04.png";
 
 const ImageSlider = () => {
-  const images = ["/ex1.png", "/ex2.png", "/ex3.png"];
+  const images = ["ex1.png", "ex2.png", "ex3.png"];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -38,8 +36,8 @@ const ImageSlider = () => {
   <div className="slider-bottom">
     {/* Side images */}
     <div className="side-images">
-      <img src={sideImage1} />
-      <img src={sideImage2}/>
+      <img src="new-05.png"/>
+      <img src="new-04.png"/>
     </div>
 
     {/* Image slider */}
@@ -54,8 +52,8 @@ const ImageSlider = () => {
     </div>
 
     <div className="side-images">
-      <img src={sideImage2} />
-      <img src={sideImage1}/>
+      <img src="new-04.png" />
+      <img src="new-05.png"/>
     </div>
 
     

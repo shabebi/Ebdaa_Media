@@ -33,7 +33,7 @@ export default function Header({ footerRef }) {
         </ul>
       </nav>
       <img
-        src="/ebdaa_slider-06.jpg"
+        src="ebdaa_slider-06.jpg"
         alt="Logo"
         className="header-logo"
         style={{ transform: `translateX(${imgPosition}%)` }}
