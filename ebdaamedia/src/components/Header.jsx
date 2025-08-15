@@ -3,28 +3,44 @@ import "./Header.css";
 
 export default function Header({ footerRef }) {
   const [imgPosition, setImgPosition] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Check if mobile on mount and resize
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkIfMobile();
+    window.addEventListener("resize", checkIfMobile);
+
     const handleScroll = () => {
       if (!footerRef.current) return;
 
       const scrollTop = window.scrollY;
       const footerTop = footerRef.current.getBoundingClientRect().top + window.scrollY;
       const maxScroll = footerTop - window.innerHeight;
-
-      // Calculate percentage of scroll until footer
       const progress = Math.min(scrollTop / maxScroll, 1);
 
-      // Move image from left (0%) to right (100%)
-      setImgPosition(progress * 1300);
+      // Different behavior for mobile and desktop
+      if (isMobile) {
+        // For mobile: move from 0% to 100% (but CSS will limit actual movement)
+        setImgPosition(progress * 100);
+      } else {
+        // For desktop: keep your original large movement
+        setImgPosition(progress * 500);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [footerRef]);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", checkIfMobile);
+    };
+  }, [footerRef, isMobile]);
 
   return (
-    <header className="header">
+    <header className={`header ${isMobile ? 'mobile' : ''}`}>
       <nav>
         <ul>
           <li><a href="#hero">من نحن؟</a></li>

@@ -1,21 +1,32 @@
+/* VideoSection.css */
 .video-section {
   margin-top: 60px; /* space for fixed header */
   display: flex;
   justify-content: center;
   background-color: white;
+  width: 100%;
 }
 
-.video-section video {
+.video-section .background-video {
   width: 80%;
   height: auto;
   margin-left: 310px;
+  pointer-events: none; /* Disable all interactions */
+  -webkit-tap-highlight-color: transparent; /* Remove mobile tap highlight */
 }
 
-/* Small Mobile Styles (360px and below) */
-@media (max-width: 660px) {
-  .video-section video {
-  width: 100%;
-  height: auto;
-  margin-left: 0px;
+/* Tablet and Mobile Styles */
+@media (max-width: 1024px) {
+  .video-section .background-video {
+    width: 90%;
+    margin-left: 150px;
+  }
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .video-section .background-video {
+    width: 100%;
+    margin-left: 0;
+  }
 }
