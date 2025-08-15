@@ -28,7 +28,7 @@ export default function Header({ footerRef }) {
         setImgPosition(progress * 100);
       } else {
         // For desktop: keep your original large movement
-        setImgPosition(progress * 500);
+        setImgPosition(progress * 850);
       }
     };
 

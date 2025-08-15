@@ -257,29 +257,3 @@
     height: 3px;
   }
 }
-
-/* Small Mobile Styles (360px and below) */
-@media (max-width: 360px) {
-  .about-section {
-    padding: 1.2rem 0.5rem;
-  }
-  
-  .feature-card,
-  .about-right {
-    padding: 1rem;
-  }
-  
-  .feature-card h2,
-  .about-right h2 {
-    font-size: 1.2rem;
-  }
-  
-  .about-right h3 {
-    font-size: 1.1rem;
-  }
-  
-  .feature-card p,
-  .about-right p {
-    font-size: 0.85rem;
-  }
-}
