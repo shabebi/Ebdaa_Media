@@ -21,12 +21,18 @@
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* name the areas so we can reorder on mobile */
+  grid-template-areas: "left right";
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
-  direction: ltr; 
+  direction: ltr;
 }
+
+/* map children to areas */
+.about-left  { grid-area: left; }
+.about-right { grid-area: right; }
 
 /* Left Section Styles */
 .about-left {
@@ -70,7 +76,7 @@
   font-size: 1.05rem;
 }
 
-/* Right Section Styles */
+/* Right Section Styles (big card) */
 .about-right {
   background: #eef9fb;
   border-radius: 12px;
@@ -141,119 +147,42 @@
 
 /* Tablet Styles (1024px and below) */
 @media (max-width: 1024px) {
-  .about-section {
-    padding: 2.5rem 1rem;
-  }
-  
-  .about-top-line {
-    width: 80%;
-  }
-  
-  .about-grid {
-    gap: 1.5rem;
-    padding: 0.8rem;
-  }
-  
-  .feature-card,
-  .about-right {
-    padding: 1.5rem;
-  }
-  
-  .feature-card h2,
-  .about-right h2 {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-  }
-  
-  .about-right h3 {
-    font-size: 1.5rem;
-  }
-  
-  .feature-card p,
-  .about-right p {
-    font-size: 1rem;
-  }
+  .about-section { padding: 2.5rem 1rem; }
+  .about-top-line { width: 80%; }
+  .about-grid { gap: 1.5rem; padding: 0.8rem; }
+  .feature-card, .about-right { padding: 1.5rem; }
+  .feature-card h2, .about-right h2 { font-size: 1.6rem; margin-bottom: 1rem; }
+  .about-right h3 { font-size: 1.5rem; }
+  .feature-card p, .about-right p { font-size: 1rem; }
 }
 
 /* Small Tablet Styles (768px and below) */
 @media (max-width: 768px) {
-  .about-section {
-    padding: 2rem 1rem;
-  }
-  
-  .about-top-line {
-    width: 85%;
-    margin-bottom: 1.2rem;
-  }
-  
-  .feature-card h2,
-  .about-right h2 {
-    font-size: 1.4rem;
-  }
-  
-  .about-right h3 {
-    font-size: 1.3rem;
-  }
-  
-  .feature-card p,
-  .about-right p {
-    font-size: 0.95rem;
-    line-height: 1.7;
-  }
-  
-  .feature-card h2::after,
-  .about-right h3::after {
-    width: 50px;
-  }
-  
-  .about-right h2::after {
-    width: 70px;
+  .about-section { padding: 2rem 1rem; }
+  .about-top-line { width: 85%; margin-bottom: 1.2rem; }
+  .feature-card h2, .about-right h2 { font-size: 1.4rem; }
+  .about-right h3 { font-size: 1.3rem; }
+  .feature-card p, .about-right p { font-size: 0.95rem; line-height: 1.7; }
+  .feature-card h2::after, .about-right h3::after { width: 50px; }
+  .about-right h2::after { width: 70px; }
+
+  /* ⭐ Reorder on phones/tablets: big card first, then the two small cards */
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "right"   /* big card first */
+      "left";   /* then the two cards stack inside .about-left */
   }
 }
 
 /* Mobile Styles (480px and below) */
 @media (max-width: 480px) {
-  .about-grid {
-    grid-template-columns: 1fr; /* Stack columns on mobile */
-    gap: 1.2rem;
-  }
-  
-  .about-section {
-    padding: 1.5rem 0.8rem;
-  }
-  
-  .about-top-line {
-    width: 90%;
-    height: 6px;
-  }
-  
-  .feature-card,
-  .about-right {
-    padding: 1.2rem;
-  }
-  
-  .feature-card h2,
-  .about-right h2 {
-    font-size: 1.3rem;
-  }
-  
-  .about-right h3 {
-    font-size: 1.2rem;
-  }
-  
-  .feature-card p,
-  .about-right p {
-    font-size: 0.9rem;
-  }
-  
-  .feature-card h2::after,
-  .about-right h3::after {
-    width: 40px;
-    height: 2px;
-  }
-  
-  .about-right h2::after {
-    width: 60px;
-    height: 3px;
-  }
+  .about-section { padding: 1.5rem 0.8rem; }
+  .about-top-line { width: 90%; height: 6px; }
+  .feature-card, .about-right { padding: 1.2rem; }
+  .feature-card h2, .about-right h2 { font-size: 1.3rem; }
+  .about-right h3 { font-size: 1.2rem; }
+  .feature-card p, .about-right p { font-size: 0.9rem; }
+  .feature-card h2::after, .about-right h3::after { width: 40px; height: 2px; }
+  .about-right h2::after { width: 60px; height: 3px; }
 }
